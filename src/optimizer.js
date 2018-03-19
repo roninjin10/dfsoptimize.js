@@ -1,5 +1,5 @@
 const Optimizer = function() {
-  let this.memoized = {};
+  this.memoized = {};
 };
 
 Optimizer.prototype.optimize = function(playerPool, currentLineup, currentPlayer) {
@@ -12,7 +12,7 @@ Optimizer.prototype.optimize = function(playerPool, currentLineup, currentPlayer
   const lineupIfPass = optimize(playerPool, currentLineup, currentPlayer + 1);
   const lineupIfTake = optimize(playerPool, currentLineup.addPlayer(playerPool, currentPlayer), currentPlayer + 1);
 
-  const out;
+  let out;
   if (lineupIfPass.failed || lineupIfTake.failed) {
     out = lineupIfPass.failed ? lineupIfTake : lineupIfPass;
   } else {

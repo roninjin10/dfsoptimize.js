@@ -1,15 +1,5 @@
 const Lineup = function() {
-  this.roster = {
-    pg1: undefined,
-    pg2: undefined,
-    sg1: undefined,
-    sg2: undefined,
-    sf1: undefined,
-    sf2: undefined,
-    pf1: undefined,
-    pf2: undefined,
-    c1: undefined
-  };
+  this.roster = {};
   this.salary = 0;
   this.projection = projection;
   this.failed = false;
